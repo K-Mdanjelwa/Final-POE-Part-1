@@ -38,6 +38,59 @@ namespace Final_POE_Part_1
         public void recIng()
         {
 
+            Console.WriteLine("WELCOME TO RECIPE APP: ");  //Outputs message inside parameters
+
+            Console.WriteLine("Enter the recipe name");
+            nameOfing = Console.ReadLine();                 //Accepts user input and stores in the variable
+
+            Console.WriteLine("Enter number of ingredients ");
+            numOfIng = int.Parse(Console.ReadLine());
+          
+
+            ingArray = new String[numOfIng];            //Declaring array size with numOfIng inputted by user
+            amountArray = new double[numOfIng];
+            measureArray = new String[numOfIng];
+
+           
+
+            int ingNo = 0;                              //Created variable with 0 as value
+            for (int i = 0; i < numOfIng; i++)          //A for loop that will loop through the statement the number of times numOfIng represents
+            {
+                ingNo++;
+                Console.WriteLine("Ingredient no." + ingNo + ":");
+                ingArray[i] = Console.ReadLine();       //User input is inserted into arrays
+                
+
+
+                Console.WriteLine("Enter quantity of ingredient: ");
+                amountArray[i] = double.Parse(Console.ReadLine());
+               
+
+                Console.WriteLine("Enter unit of measurement: ");
+                measureArray[i] = Console.ReadLine();
+                
+            }
+
+            Console.WriteLine("Enter the number of steps to be taken: ");
+            steps = Convert.ToInt32(Console.ReadLine());
+
+
+            stepArray = new string[steps];
+            
+
+            int stepsNo = 0;
+            for (int a = 0; a < stepArray.Length; a++)
+            {
+                stepsNo++;
+                Console.WriteLine("Enter step No." + stepsNo);
+                stepArray[a] = Console.ReadLine();
+               
+            }
+
+          
+
+
+
         }
         public void choices()
         {
