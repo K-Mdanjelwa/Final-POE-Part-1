@@ -31,6 +31,12 @@ namespace Final_POE_Part_1
 
         public void addRun()
         {
+            addClass l = new addClass();  //Creates object
+            l.recIng();                    //Object is used to run recIng() method
+
+        }
+        public void recIng()
+        {
 
         }
         public void choices()
