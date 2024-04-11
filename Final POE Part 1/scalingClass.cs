@@ -92,10 +92,10 @@ namespace Final_POE_Part_1
         }
         public void clear()     //Creating method for clearing the arrays and variables
         {
-            Console,WriteLine("Are you sure Y/N")
+            Console.WriteLine("Are you sure Y/N");
 
-            string choice2 = Console.Readline();
-            if (choice2.equalsIgnoreCase("y"))
+            String c = Console.ReadLine();
+            if (c.Equals("y") || c.Equals("N"))
             {
                 addClass.nameOfing = "";
 
@@ -110,13 +110,13 @@ namespace Final_POE_Part_1
                 Console.WriteLine();
                 run();
             }
-            else if (choice.equalsIgnoreCase("n"))
+            else if (c.Equals("n") || c.Equals("N"))
             {
-                run()
+                run();
             }
             else
             {
-                Console.WriteLine("Please choose one of the options")
+                Console.WriteLine("Please choose one of the options");
 
                         clear();
 
@@ -124,25 +124,37 @@ namespace Final_POE_Part_1
         }
 
          public void resetOriginal()     //Creating method for rest the values to original values
+         {
+            for (int m = 0; m < addClass.numOfIng; m++)
             {
 
+                addClass.amountArray[m] = addClass.amountArray2[m];
+                addClass.measureArray[m] = addClass.measureArray2[m];
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Successfully reset to original values");
+            Console.WriteLine();
+            run();
          }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
