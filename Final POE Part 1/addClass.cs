@@ -89,7 +89,7 @@ namespace Final_POE_Part_1
                 stepsNo++;
                 Console.WriteLine("Enter step No." + stepsNo);
                 stepArray[a] = Console.ReadLine();
-                stepArray2[a] += Console.ReadLine();
+               
             }
             Console.WriteLine();
             choices();
@@ -98,6 +98,7 @@ namespace Final_POE_Part_1
         }
         public void choices() //Method for the options that user will choose
         {
+            
             Console.WriteLine("1. Add recipe \n2. Scale existing ingredients \n3. View Recipe \n4. Reset to original values \n5. Exit Application");
             int choice = Convert.ToInt32(Console.ReadLine());
             if (choice == 1)                        //responds to user choice by running statement if matched with user input
@@ -122,7 +123,7 @@ namespace Final_POE_Part_1
             {
                 Environment.Exit(1);
             }
-
+            
 
         }
         public void viewRec()                   //Method for viewing the recipe
@@ -132,7 +133,7 @@ namespace Final_POE_Part_1
             {
                 Console.WriteLine($"- {amountArray[p]} {measureArray[p]} of {ingArray[p]}");
             }
-
+            
 
             int st = 0;
             for (int j = 0; j < stepArray.Length; j++)
@@ -140,6 +141,7 @@ namespace Final_POE_Part_1
                 st++;
                 Console.WriteLine($"Description for step No." + st + ": " + stepArray[j]);
             }
+            Console.WriteLine();
             choices();
         }
 

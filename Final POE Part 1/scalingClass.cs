@@ -128,7 +128,7 @@ namespace Final_POE_Part_1
             for (int m = 0; m < addClass.numOfIng; m++)
             {
 
-                addClass.amountArray[m] = addClass.amountArray2[m];
+                addClass.amountArray[m] = addClass.amountArray2[m];         //copying over the original array values 
                 addClass.measureArray[m] = addClass.measureArray2[m];
             }
 
