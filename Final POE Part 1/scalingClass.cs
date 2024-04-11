@@ -55,17 +55,44 @@ namespace Final_POE_Part_1
                 }
 
             }
-            public void half()   //Creating method for halving the arrays
+        }
+        public void half()   //Creating method for halving the arrays
         {
+            for (int i = 0; i < addClass.amountArray.Length; i++)
+            {
+                addClass.amountArray[i] /= 2;
+            }
+            Console.WriteLine("Divied by 2 applied to all quantities");
+            Console.WriteLine();
+            run();
+
         }
         public void double_()   //Creating method for doubling the arrays
         {
+            for (int i = 0; i < addClass.amountArray.Length; i++)
+            {
+
+                addClass.amountArray[i] *= 2;
+            }
+            Console.WriteLine("Times 2 applied to all quantities");
+            Console.WriteLine();
+            run();
+
         }
         public void triple()    //Creating method for tripling the arrays
         {
+            for (int i = 0; i < addClass.amountArray.Length; i++)
+            {
+                addClass.amountArray[i] *= 3;
+            }
+            Console.WriteLine("Triple applied to all quantities");
+            Console.WriteLine();
+            run();
+
         }
         public void clear()     //Creating method for clearing the arrays and variables
         {
+
         }
         public void resetOriginal()     //Creating method for rest the values to original values
         {
