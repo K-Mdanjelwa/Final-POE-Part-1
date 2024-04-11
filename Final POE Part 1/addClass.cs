@@ -125,10 +125,46 @@ namespace Final_POE_Part_1
 
 
         }
-        public void viewRec()
+        public void viewRec()                   //Method for viewing the recipe
         {
+            Console.WriteLine("Your recipe: " + nameOfing + "\nYour ingredients: ");
+            for (int p = 0; p < numOfIng; p++)
+            {
+                Console.WriteLine($"- {amountArray[p]} {measureArray[p]} of {ingArray[p]}");
+            }
+
+
+            int st = 0;
+            for (int j = 0; j < stepArray.Length; j++)
+            {
+                st++;
+                Console.WriteLine($"Description for step No." + st + ": " + stepArray[j]);
+            }
+            choices();
         }
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 
 }
+
+
