@@ -98,30 +98,36 @@ namespace Final_POE_Part_1
         }
         public void choices() //Method for the options that user will choose
         {
-            
-            Console.WriteLine("1. Add recipe \n2. Scale existing ingredients \n3. View Recipe \n4. Reset to original values \n5. Exit Application");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            if (choice == 1)                        //responds to user choice by running statement if matched with user input
+            while (true)
             {
-                recIng();
-            }
-            else if (choice == 2)
-            {
-                scalingClass t = new scalingClass();
-                t.adjust();
-            }
-            else if (choice == 3)
-            {
-                viewRec();
-            }
-            else if (choice == 4)
-            {
-                scalingClass t = new scalingClass();
-                t.resetOriginal();
-            }
-            else if (choice == 5)
-            {
-                Environment.Exit(1);
+                Console.WriteLine("1. Add recipe \n2. Scale existing ingredients \n3. View Recipe \n4. Reset to original values \n5. Exit Application");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                if (choice == 1)                        //responds to user choice by running statement if matched with user input
+                {
+                    recIng();
+                    break;
+                }
+                else if (choice == 2)
+                {
+                    scalingClass t = new scalingClass();
+                    t.adjust();
+                    break;
+                }
+                else if (choice == 3)
+                {
+                    viewRec();
+                    break;
+                }
+                else if (choice == 4)
+                {
+                    scalingClass t = new scalingClass();
+                    t.resetOriginal();
+                    break;
+                }
+                else if (choice == 5)
+                {
+                    Environment.Exit(1);
+                }
             }
             
 
