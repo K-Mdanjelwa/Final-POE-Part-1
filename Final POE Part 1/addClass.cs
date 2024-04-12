@@ -38,7 +38,7 @@ namespace Final_POE_Part_1
         }
         public void recIng() //method to run the recipe recording
         {
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("WELCOME TO RECIPE APP: ");  //Outputs message inside parameters
 
             Console.WriteLine("Enter the recipe name");
@@ -99,7 +99,7 @@ namespace Final_POE_Part_1
         public void choices() //Method for the options that user will choose
         {
             while (true)
-            {
+            {   Console.ForegroundColor=ConsoleColor.Blue;
                 Console.WriteLine("1. Add recipe \n2. Scale existing ingredients \n3. View Recipe \n4. Reset to original values \n5. Exit Application");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 if (choice == 1)                        //responds to user choice by running statement if matched with user input
@@ -134,6 +134,7 @@ namespace Final_POE_Part_1
         }
         public void viewRec()                   //Method for viewing the recipe
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Your recipe: " + nameOfing + "\nYour ingredients: ");
             for (int p = 0; p < numOfIng; p++)
             {
@@ -150,25 +151,6 @@ namespace Final_POE_Part_1
             Console.WriteLine();
             choices();
         }
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     }
