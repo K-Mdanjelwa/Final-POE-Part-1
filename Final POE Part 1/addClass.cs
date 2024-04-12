@@ -40,6 +40,7 @@ namespace Final_POE_Part_1
         {
 
             Console.ForegroundColor = ConsoleColor.Blue;
+
             Console.WriteLine("WELCOME TO RECIPE APP: ");  //Outputs message inside parameters
 
             Console.WriteLine("Enter the recipe name");
