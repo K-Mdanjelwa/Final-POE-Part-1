@@ -38,7 +38,8 @@ namespace Final_POE_Part_1
         }
         public void recIng() //method to run the recipe recording
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("WELCOME TO RECIPE APP: ");  //Outputs message inside parameters
 
             Console.WriteLine("Enter the recipe name");
