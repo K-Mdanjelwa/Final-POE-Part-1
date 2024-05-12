@@ -210,23 +210,7 @@ namespace Final_POE_Part_1
             Console.WriteLine();
             choices();
         }
-        public void menu()
-        {
-            while (true)
-            {
-                Console.WriteLine("Please choose one of the following: ");
-                Console.WriteLine("1. Create Recipe ");
-                Console.WriteLine("2. Search Recipe ");
-                Console.WriteLine("3. Display Recipe ");
-                Console.WriteLine("4. Exit Application ");
-                String ch=Console.ReadLine();
-                switch (ch)
-                {
-                    
-                        
-                }
-            }
-        }
+       
     
     }
     class recipeCount
@@ -252,8 +236,75 @@ namespace Final_POE_Part_1
                     recDictionary.Add(recName, recipe);
 
                 }
-            }
+                string choice;
+                do {
+                    Console.WriteLine("Display recipe details? (Y/N)");
+                    choice = Console.ReadLine();
+                    switch (ans)
+                    {
+                        case "Y":
+                            foreach (var recipeEntry in recDictionary)
+                            {
+                                Console.WriteLine($"Recipe Name: {recipeEntry.Key}");
+                                recipeEntry.Value.viewRec();
+                            }
+                            break;
+                        case "N":
+                            RecMenu menu = new RecMenu(recDictionary);
+                            menu.menu();
+                            break;
+                        default:
+                            Console.WriteLine("Enter a valid number: ");
+                            break;
+                    }
 
+                } while (!choice = "N");
+            }
+            else { Console.WriteLine("Please enter"); }
+
+        }
+        public void recList()
+        {
+            foreach(var recEntry in recDictionary) 
+            { 
+                Console.WriteLine($"Recipe Name: "(recEntry.Key));
+            }
+        }
+        public void recSearch()
+        {
+            Console.WriteLine("Enter the name of recipe: ")
+        }
+    }
+    class RecMenu
+    {
+        private recipeCount recLog;
+        private Dictionary<String, addClass> recDictionary;     
+        public RecMenu(Dictionary<String, addClass> recDictionary)  
+        {
+            this.recDictionary = recDictionary;
+            recLog = new recipeCount(recDictionary);
+        }
+
+        public void menu()
+        {
+            while (true)
+            {
+                Console.WriteLine("Please choose one of the following: ");
+                Console.WriteLine("1. Create Recipe ");
+                Console.WriteLine("2. Search Recipe ");
+                Console.WriteLine("3. Display Recipe ");
+                Console.WriteLine("4. Exit Application ");
+                String ch = Console.ReadLine();
+                switch (ch)
+                {
+                    case "1":
+                        recLog.logRecipe();
+                        break;
+                    case "2":
+                        recLog.
+                    c
+                }
+            }
         }
     }
 
